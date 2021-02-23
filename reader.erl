@@ -1,6 +1,6 @@
 %%%%%%% 18.02.2021 %%%%%%%%%%%%%%%%%%%% LESSON_7 %%%%%%%%%%%%%%%%%%%%
 
-% программа котораяпринемает имя файлпа и выводит егосодержимое на экра
+% программа которая принемает имя файлпа и выводит егосодержимое на экра
 
 -module(reader).
 
@@ -8,6 +8,9 @@
 -export([write/2]).
 -export([read_cons/1]).
 
+
+
+% reader:read("stor.erl").
 
 read(FileName) ->
 	case file:open(FileName, [read, binary]) of
@@ -31,7 +34,7 @@ read_content(IoDevice, X) ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
+% reader:write("sch.txt", "I had a cat two ears ago").
 
 write(FileName, Content) ->
 	case file:open(FileName, [write, append]) of
